@@ -8,7 +8,7 @@ const jwt = require('jsonwebtoken');
 const {jwt_secret}=require('../config/keys');
 const requiredLogin = require('../middlewares/requiredLogin');
 const nodemailer= require('nodemailer');
-const {email_pass,email_id} = require('../config/keys')
+const {email_pass,email_id,EMAIL} = require('../config/keys')
 //const sendinblueTransport = require('nodemailer-sendinblue-transport')
 
 //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
@@ -122,7 +122,7 @@ router.post('/reset-password',(req,res)=>{
                          subject:"Password reset",
                          html:`
                            <p>You requested for password reset </p>
-                           <h5>click on this <a href="http://localhost:3000/reset/${token}">link</a> to reset your password
+                           <h5>click on this <a href="${EMAIL}/reset/${token}">link</a> to reset your password
                          `
                      })
                      res.send({message:"Check your email"})
