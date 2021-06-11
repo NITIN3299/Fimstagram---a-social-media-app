@@ -1,7 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Grand+Hotel&display=swap');
 /* font-family: 'Grand Hotel', cursive; */
 a{
-  color:rgb(80, 176, 231) ;
+  color:rgb(80, 176, 231) !important;
+}
+.nav-btns{
+  color:black !important;
 }
 .app_headerImage{
   height:64px;

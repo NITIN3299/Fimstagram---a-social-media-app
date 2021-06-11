@@ -26,10 +26,6 @@ let transporter = nodemailer.createTransport({
     }
 });
 
-router.get('/',(req,res)=>{
-    res.send("hello")
-})
-
 //signup
 router.post('/signup',(req,res)=>{
     const {name,email,password,pic} = req.body;

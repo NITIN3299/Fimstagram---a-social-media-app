@@ -16,9 +16,9 @@ const Navbar = ()=>{
         if(state){
             return ([
                 <li key="0"><i data-target="modal1" className="material-icons  modal-trigger" style={{color:"black"}}>search</i></li>,
-                <li key="1"><Link to="/explore" >Explore</Link></li>,
-                <li key="2"><Link to="/profile">Profile</Link></li>,
-                <li key="3"><Link to="/createpost">Create Post</Link></li>,
+                <li key="1"><Link className="nav-btns" to="/explore" >Explore</Link></li>,
+                <li key="2"><Link className="nav-btns" to="/profile">Profile</Link></li>,
+                <li key="3"><Link className="nav-btns" to="/createpost">Create Post</Link></li>,
                 <li key="4"><button className="btn #c62828 red darken-3"
                       onClick={()=>{
                           localStorage.clear()
@@ -31,8 +31,8 @@ const Navbar = ()=>{
             ])
         }else{
             return ([
-                <li key="5"><Link to="/signin">SignIn</Link></li>,
-                <li key="6"><Link to="/signup">SignUp</Link></li>
+                <li key="5"><Link className="nav-btns" to="/signin">SignIn</Link></li>,
+                <li key="6"><Link className="nav-btns" to="/signup">SignUp</Link></li>
             ])
         }
     }
@@ -54,7 +54,7 @@ const Navbar = ()=>{
     }
     return (
         <nav>
-       <div className="nav-wrapper white">
+       <div className="nav-wrapper white" >
       <Link to={state?"/":"/signin"} className="brand-logo">
           <img className="app_headerImage"
        src="https://1000logos.net/wp-content/uploads/2017/02/ig-logo.png" alt=""/>
